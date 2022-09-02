@@ -2,7 +2,7 @@
 
 static const char *_toAscii = "0123456789abcdef";
 
-String toString(uint64_t value, unsigned char base) {
+String Print64::toString(uint64_t value, unsigned char base) {
     if (base > 16) {
         base = 16;
     }
@@ -25,12 +25,12 @@ String toString(uint64_t value, unsigned char base) {
     return result;
 }
 
-String toString(int64_t value) {
+String Print64::toString(int64_t value) {
     if (value < 0) {
-        return String("-") + toString((uint64_t)-value, 10);
+        return String("-") + Print64::toString((uint64_t)-value, 10);
     }
     else {
-        return toString((uint64_t)value, 10);
+        return Print64::toString((uint64_t)value, 10);
     }
 }
 

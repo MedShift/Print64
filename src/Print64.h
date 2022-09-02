@@ -10,25 +10,27 @@
 
 #include "Particle.h"
 
-/**
- * @brief Convert an unsigned 64-bit integer to a string
- * 
- * @param value The value to convert
- * 
- * @param base The number base. Acceptable values are 2, 8, 10, and 16. Default is 10 (decimal).
- * 
- * @return A String object containing an ASCII representation of the value.
- */
-String toString(uint64_t value, unsigned char base = 10);
+namespace Print64 {
 
-/**
- * @brief Convert an signed 64-bit integer to a string (ASCII decimal signed integer)
- * 
- * @param value The value to convert
- * 
- * @return A String object containing an ASCII representation of the value (decimal)
- */
-String toString(int64_t value);
+    /**
+     * @brief Convert an unsigned 64-bit integer to a string
+     * 
+     * @param value The value to convert
+     * 
+     * @param base The number base. Acceptable values are 2, 8, 10, and 16. Default is 10 (decimal).
+     * 
+     * @return A String object containing an ASCII representation of the value.
+     */
+    String toString(uint64_t value, unsigned char base = 10);
 
+    /**
+     * @brief Convert an signed 64-bit integer to a string (ASCII decimal signed integer)
+     * 
+     * @param value The value to convert
+     * 
+     * @return A String object containing an ASCII representation of the value (decimal)
+     */
+    String toString(int64_t value);
+}
 
 #endif /* __PRINT64_H */
